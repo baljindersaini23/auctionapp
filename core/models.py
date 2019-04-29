@@ -36,7 +36,7 @@ class Product(models.Model):
     created = models.DateTimeField(auto_now_add=True)
     updated = models.DateTimeField(auto_now=True)
 
-    def __unicode__(self):
+    def __str__(self):
         return self.product_name
 
 
@@ -46,7 +46,7 @@ class Seller(models.Model):
     user_name = models.ForeignKey(User, on_delete=models.CASCADE)
     product_id = models.ForeignKey(Product, on_delete=models.CASCADE)
 
-    def __unicode__(self):
+    def __str__(self):
         return str(self.user_name)
 
 
@@ -72,6 +72,6 @@ class Bidder(models.Model):
     product_id = models.ForeignKey(Product, on_delete=models.CASCADE)
     bid_amount = models.CharField(max_length=255, validators=[numeric])
 
-    def __unicode__(self):
-        return str(self.user_name)
+    def __str__(self):
+        return self.user_name.first_name
 

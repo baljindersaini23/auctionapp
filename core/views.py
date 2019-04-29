@@ -20,6 +20,9 @@ from django.contrib.auth.models import User
 from .models import Product, Bidder, Seller,Dis
 from django.views.generic import ListView, TemplateView
 
+
+
+
 def mailing(bidder, seller):
     template = loader.get_template("core/college_mail.html")
     if (bidder == 0):
@@ -103,6 +106,7 @@ def index(request):
 
 
 def save_bid(request):
+    idss = request.POST.get('product_id')
     context = dict()
     context['product_list'] = Product.objects.get(id=request.POST.get('product_id'))
     context['seller'] = Seller.objects.get(product_id_id=request.POST.get('product_id'))
@@ -110,6 +114,8 @@ def save_bid(request):
         if int(request.POST.get('minimum_price')) > int(request.POST.get('bid_amount')):
             context['error'] = "bid price should be more than minimum price"
             return render(request, 'core/product_detail.html', context)
+        elif (Product.objects.get(id=idss).bid_end_date <= datetime.date.today()): 
+            context['error'] = "bid date expired"
         else:
             x = Bidder.objects.filter(product_id=Product.objects.get(id=request.POST.get('product_id'))).values('user_name')
             a = 0
@@ -128,3 +134,9 @@ def save_bid(request):
 
 def bid_details(request):
     return HttpResponse("Redirect Page")
+
+
+
+
+
+

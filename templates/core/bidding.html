@@ -1,4 +1,4 @@
-% load static %}
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -63,7 +63,7 @@
         <div class="row align-items-center">
           
           <div class="col-11 col-xl-2 site-logo">
-            <h1 class="mb-0"><a href="{% static 'index.html' %}" class="text-white h2 mb-0">Logis</a></h1>
+            <h1 class="mb-0"><a href="{% static 'index.html' %}" class="text-white h2 mb-0">Auction</a></h1>
           </div>
           <div class="col-12 col-md-10 d-none d-xl-block">
             <nav class="site-navigation position-relative text-right" role="navigation">
@@ -78,7 +78,7 @@
                   </ul>
                 </li>
                 <li><a href="#section-services" class="nav-link">Services</a></li>
-                <li><a href="#section-industries" class="nav-link">Industries</a></li>
+                <!-- <li><a href="#section-industries" class="nav-link">Industries</a></li> -->
                 <li><a href="#section-blog" class="nav-link">Blog</a></li>
                 <li><a href="#section-contact" class="nav-link">Contact</a></li>
                 {% if not request.user.is_authenticated %}
@@ -106,10 +106,10 @@
           <div class="col-md-8" data-aos="fade-up" data-aos-delay="400">
             
 
-            <h1 class="text-white font-weight-light text-uppercase font-weight-bold" data-aos="fade-up">We Make Shipping</h1>
-            <p class="mb-5" data-aos="fade-up" data-aos-delay="100">A Logistics Company</p>
-            <p data-aos="fade-up" data-aos-delay="200"><a href="viewproduct" class="btn btn-primary py-3 px-5 text-white">Want to Buy a Product!</a></p>
-            <p data-aos="fade-up" data-aos-delay="200"><a href="viewproduct" class="btn btn-primary py-3 px-5 text-white">Want to Sell a Product!</a></p>
+            <!-- <h1 class="text-white font-weight-light text-uppercase font-weight-bold" data-aos="fade-up">We Make Shipping</h1>
+            <p class="mb-5" data-aos="fade-up" data-aos-delay="100">A Logistics Company</p> -->
+            <p data-aos="fade-up" data-aos-delay="200"><a href="{% url 'view_product' %}" class="btn btn-primary py-3 px-5 text-white">Want to Buy a Product!</a></p>
+            <p data-aos="fade-up" data-aos-delay="200"><a href="{% url 'add_product' %}" class="btn btn-primary py-3 px-5 text-white">Want to Sell a Product!</a></p>
 
           </div>
         </div>
@@ -119,8 +119,7 @@
 
 
 
-
-    <body background="static\images\hero_bg_2.jpg">
+    <body background="\static\images\auc.jpg">
     <script src="{% static 'js/jquery-3.3.1.min.js' %}"></script>
     <script src="{% static 'js/jquery-migrate-3.0.1.min.js' %}"></script>
     <script src="{% static 'js/jquery-ui.js' %}"></script>

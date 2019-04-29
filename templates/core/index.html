@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Logis &mdash; Onepage Website Template by Free-Template.co</title>
+    <title>Auction</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     
@@ -46,7 +46,7 @@
   
   <body data-spy="scroll" data-target=".site-navbar-target" data-offset="200">
   
-  <!-- <div class="site-wrap"> -->
+  <div class="site-wrap"> 
 
     <div class="site-mobile-menu site-navbar-target">
       <div class="site-mobile-menu-header">
@@ -78,7 +78,7 @@
                   </ul>
                 </li> -->
                 <li><a href="#section-services" class="nav-link">Services</a></li>
-                <!-- <li><a href="#section-industries" class="nav-link">Industries</a></li> -->
+                <!-- <li><a href="#section-industries" class="nav-link">Industries</a></li>
                 <!-- <li><a href="#section-blog" class="nav-link">Blog</a></li> -->
                 <!-- <li><a href="contact.html" class="nav-link">Contact</a></li> -->
                 <!-- <p data-aos="fade-up" data-aos-delay="200"><a href="http://127.0.0.1:8000/admin/login/?next=/admin/" class="btn btn-primary py-3 px-5 text-white">Admin Login</a></p> -->
@@ -86,7 +86,7 @@
                 <li><a href="accounts/login/" class="nav-link">Login</a></li>
                 {% endif %}
                 {% if request.user.is_authenticated %}
-                <li><p style="color: white">{{request.user}}</p></li>
+                <li><p style="color:burlywood">{{request.user}}</p></li>
                 <li><a href="{% url 'logout' %}" class="nav-link">Logout</a></li>
                 {% endif %}
                 <li><a href="http://127.0.0.1:8000/admin/login/?next=/admin/" class="nav-link">Admin Login</a></li>
@@ -110,7 +110,7 @@
           <div class="col-md-8" data-aos="fade-up" data-aos-delay="400">
             
 
-            <h1 class="text-white font-weight-light text-uppercase font-weight-bold" data-aos="fade-up">Give us the Goods, We’ll Take Care of the Rest.</h1>
+            <h1 class="text-white font-weight-light text-uppercase font-weight-bold" data-aos="fade-up">Search Bid Buy</h1>
             <p class="mb-5" data-aos="fade-up" data-aos-delay="100">A Bidding Company</p>
             {% if user.is_authenticated %}
             <p data-aos="fade-up" data-aos-delay="200"><a href="{% url 'view_product' %}" class="btn btn-primary py-3 px-5 text-white">Want To Buy Product!</a></p>
@@ -268,10 +268,10 @@
       </div>
     </div>
 
+ -->
 
 
 
-<!--  -->
     <div class="site-section bg-light" id="section-services">
       <div class="container">
         <div class="row justify-content-center mb-5" data-aos="fade-up">
@@ -659,7 +659,7 @@
           </div>
           <div class="col-md-3">
             <h2 class="footer-heading mb-4">Subscribe Newsletter</h2>
-            <form action="#" method="post">
+            <form action="" method="post">
               <div class="input-group mb-3">
                 <input type="text" class="form-control border-secondary text-white bg-transparent" placeholder="Enter Email" aria-label="Enter Email" aria-describedby="button-addon2">
                 <div class="input-group-append">
@@ -673,7 +673,7 @@
           <div class="col-md-12">
             <div class="border-top pt-5">
               <p>
-              <small class="block">&copy; <script>document.write(new Date().getFullYear());</script> Logis Free Template. All Rights Reserved. <br> Designed &amp; Developed by <a href="https://free-template.co/" target="_blank">Free-Template.co</a></small> 
+              <small class="block">&copy; <script>document.write(new Date().getFullYear());</script> Auction Template. All Rights Reserved. <br> Designed &amp; Developed by <a href="#" target="_blank">Baljinder Saini</a></small> 
               </p>
             </div>
           </div>
@@ -688,7 +688,7 @@
       }
     </style>
     
-  <body background="static\images\hero_bg_2.jpg">
+  <body background="static\images\bt.jpg">
 
   <script src="{% static 'js/jquery-3.3.1.min.js' %}"></script>
   <script src="{% static 'js/jquery-migrate-3.0.1.min.js' %}"></script>

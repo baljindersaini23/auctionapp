@@ -17,7 +17,7 @@ import os
 
 
 
-LOGIN_REDIRECT_URL = "/"
+LOGIN_REDIRECT_URL = "page"
 LOGIN_URL = "/accounts/login/"
 
 LOGOUT_REDIRECT_URL = "/accounts/login/"
